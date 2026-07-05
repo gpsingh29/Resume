@@ -1,0 +1,404 @@
+%% ─────────────────────────────────────────────────────────────────
+%%  Curriculum Vitae
+%%  Font     : Bitstream Charter (BT Roman)
+%%  ATS      : Single-column, paracol skills, plain headings
+%%  Icons    : fontawesome5
+%%  Footer   : Last Modified date — light gray, bottom right
+%% ─────────────────────────────────────────────────────────────────
+\documentclass[10pt, a4paper]{article}
+
+%% ── Packages ─────────────────────────────────────────────────────
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{charter}
+\usepackage{microtype}
+\usepackage[margin=1.4cm, top=1.4cm, bottom=1.8cm]{geometry}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{paracol}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+
+%% ── Colours ──────────────────────────────────────────────────────
+\definecolor{accentblue}{HTML}{2B6CB0}
+\definecolor{lightgray}{HTML}{555555}
+\definecolor{datecolor}{HTML}{CCCCCC}
+\definecolor{iconcolor}{HTML}{2D3748}
+
+%% ── Hyperlinks ───────────────────────────────────────────────────
+\hypersetup{
+  colorlinks = true,
+  urlcolor   = accentblue,
+  linkcolor  = accentblue,
+  pdfauthor  = { User Name},
+  pdftitle   = { User Name - SAP ABAP CV},
+  pdfsubject = {Curriculum Vitae}
+}
+
+%% ── Section style ────────────────────────────────────────────────
+\titleformat{\section}
+  {\large\bfseries\color{accentblue}}
+  {}{0em}{}
+  [\vspace{-0.5em}\rule{\linewidth}{0.6pt}\vspace{-0.3em}]
+\titlespacing{\section}{0pt}{8pt}{4pt}
+
+\pagestyle{empty}
+
+%% ── List settings ────────────────────────────────────────────────
+\setlist[itemize]{leftmargin=1.5em, topsep=2pt, itemsep=1pt, parsep=0pt}
+
+%% ── CV Entry command ─────────────────────────────────────────────
+\newcommand{\cventry}[3]{%
+  \noindent
+  \begin{tabularx}{\linewidth}{@{}X r@{}}
+    \textbf{#1} --- \textit{#2} & \textcolor{lightgray}{\small #3}
+  \end{tabularx}
+  \vspace{2pt}
+}
+\newcommand{\clientinfo}[2]{%
+  \noindent\textcolor{lightgray}{\small\textit{#1:}}\enspace#2\par
+}
+
+%% ─────────────────────────────────────────────────────────────────
+\begin{document}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  HEADER
+%% ══════════════════════════════════════════════════════════════════
+\begin{center}
+  {\LARGE\bfseries User Name}\\[4pt]
+  {\large\color{accentblue} SAP ABAP 7.5 Certified Consultant \quad|\quad SAP HANA 2.0 Certified Consultant}\\[6pt]
+  \textcolor{lightgray}{%
+    \textbf{Phone:} +1 999 999 0999 \quad
+    \textbf{Email:} \href{mailto:xyz@gmail.com}{xyz@gmail.com} \quad
+    \textbf{Current Employer:} XYZ Pvt Ltd%
+  }
+\end{center}
+\vspace{2pt}\rule{\linewidth}{1.2pt}\vspace{4pt}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  PROFESSIONAL SUMMARY
+%% ══════════════════════════════════════════════════════════════════
+\section{Professional Summary}
+Results-driven \textbf{SAP ABAP Consultant} with over \textbf{11+ years of experience}
+in design, development, and delivery of enterprise SAP applications across
+\textbf{pharma, aviation, energy, and manufacturing} sectors. Certified in
+\textbf{SAP HANA 2.0 (E\_HANAAW\_17)}, \textbf{SAP Activate Methodology (C\_ACTIVATE13)} and
+\textbf{SAP ABAP 7.5 (C\_TAW12\_750)}, with deep expertise in
+\textbf{ABAP on HANA, CDS Views, AMDP, RAP, OData Services,
+SAP Fiori, and S/4HANA Migrations}. Proven Module Lead who has delivered
+\textbf{30+ ABAP objects}, engineered \textbf{multi-system integrations} across
+4 ERPs, and driven \textbf{40--60\% performance improvements} through HANA code
+pushdown. Actively seeking \textbf{SAP technical roles in Canada}.
+
+%% ══════════════════════════════════════════════════════════════════
+%%  CERTIFICATIONS
+%% ══════════════════════════════════════════════════════════════════
+\section{Certifications}
+\begin{itemize}
+  \item \textbf{SAP Certified Development Associate --- ABAP with SAP NetWeaver 7.5}
+        \hfill \textcolor{lightgray}{\small Exam: C\_TAW12\_750}
+  \item \textbf{SAP Certified Application Associate --- SAP HANA 2.0 (SPS04)}
+        \hfill \textcolor{lightgray}{\small Exam: E\_HANAAW\_17}
+  \item \textbf{SAP Certified Project Manager --- SAP Activate}
+        \hfill \textcolor{lightgray}{\small Exam: C\_ACTIVATE13}
+\end{itemize}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  TECHNICAL SKILLS
+%% ══════════════════════════════════════════════════════════════════
+\section{Technical Skills}
+
+\setlength{\columnsep}{2em}
+\begin{paracol}{2}
+
+  \textbf{Core ABAP \& OOP}
+  \begin{itemize}
+    \item Core ABAP, ABAP OO, New ABAP 7.5 Syntax
+    \item RAP (RESTful ABAP Programming Model)
+    \item OpenSQL, Native HANA SQL
+    \item Data Dictionary (DDIC) Objects
+  \end{itemize}
+
+  \textbf{ABAP on HANA}
+  \begin{itemize}
+    \item CDS Views (Basic, Composite, Consumption)
+    \item AMDP (ABAP Managed Database Procedures)
+    \item Code Pushdown \& Performance Tuning
+    \item OData Services (SEGW, DPC\_EXT)
+  \end{itemize}
+
+  \textbf{Interfaces \& Integration}
+  \begin{itemize}
+    \item IDocs, BAPI, RFC, SAP PI/PO
+    \item Proxy Interfaces (Inbound / Outbound)
+    \item REST APIs, JSON, POST / GET Operations
+    \item S/4HANA Migration (LTMC, LSMW)
+  \end{itemize}
+
+  \textbf{Forms Development}
+  \begin{itemize}
+    \item Adobe Forms (SFP), Smart Forms, SAP Script
+  \end{itemize}
+
+  \switchcolumn
+
+  \textbf{Enhancement Framework}
+  \begin{itemize}
+    \item BADIs, User Exits, Customer Exits
+    \item Implicit / Explicit Enhancements
+    \item BAPI Extensions (TE structures)
+    \item Screen Enhancements (Module Pool)
+  \end{itemize}
+
+  \textbf{SAP Fiori \& BTP}
+  \begin{itemize}
+    \item SAP Fiori Backend Development
+    \item SAP Business Technology Platform (BTP)
+    \item SEGW OData Project, GET\_STREAM
+    \item BRF+ Rules \& Validations
+  \end{itemize}
+
+  \textbf{Reporting \& Quality}
+  \begin{itemize}
+    \item ALV Reports (CL\_SALV\_TABLE)
+    \item SLG Application Logs
+    \item ATC Checks, SNOTE Implementation
+    \item S/4HANA Readiness Checks
+  \end{itemize}
+
+  \textbf{Tools \& Domain}
+  \begin{itemize}
+    \item STMS (300+ TRs), BC Sets (SCPR1--3)
+    \item SAP GTS, SAP EAM, IS-OIL
+    \item Migration Cockpit (LTMC, LSMW)
+    \item Agile, SAP Activate, Code Review
+  \end{itemize}
+
+\end{paracol}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  PROFESSIONAL EXPERIENCE
+%% ══════════════════════════════════════════════════════════════════
+\section{Professional Experience}
+
+%% ── Job 1 ────────────────────────────────────────────────────────
+\cventry{Module Lead}{Tech Mahindra Pvt Ltd}{Jan 2022 -- Feb 2026}
+\clientinfo{Client}{Textron Aviation, USA}
+\clientinfo{Project}{Lawson -- Migration and Development}
+\clientinfo{Team}{Module Lead managing 5 ABAP developers}
+
+\begin{itemize}
+  \item \textbf{Team Leadership \& Delivery:}
+        Led end-to-end design, development and delivery of \textbf{30+ ABAP objects}
+        across a 4-year engagement, consistently meeting sprint deadlines through
+        close collaboration with cross-functional stakeholders.
+
+  \item \textbf{Code Quality \& Governance:}
+        Enforced mandatory \textbf{ATC checks and peer code reviews} for 100\% of TR
+        movements across a team of 5, eliminating obsolete syntax and significantly
+        reducing post-go-live defects.
+
+  \item \textbf{Data Migration (10+ Programs):}
+        Engineered \textbf{10+ ABAP migration programs} to bulk-load master data from
+        Excel into SAP covering \textbf{6 object types} (Vendors, Customers, Condition
+        Records, PRs, Info Records, Cost Centers) with test-mode validation and
+        ALV red-row error highlighting.
+
+  \item \textbf{Custom Inbound IDOC Interface:}
+        Architected a \textbf{custom inbound IDOC interface} handling \textbf{3 PO
+        scenarios} (Create / Change / Delete) with a custom IDOC type, message type,
+        and identifier field on the parent segment; invoked \texttt{BAPI\_PO\_CREATE1}.
+
+  \item \textbf{BAPI Extensions --- PO (EKKO/EKPO):}
+        Extended \texttt{BAPI\_PO\_CREATE} using \texttt{BAPI\_TE\_MEPOHEADER/X}
+        structures; added \textbf{custom fields to EKKO/EKPO} and delivered ME21N
+        screen enhancements, reducing procurement manual rework.
+
+  \item \textbf{SAP Fiori Backend --- Sales Order App:}
+        Delivered the full backend of the \textbf{Sales Order Creation Fiori App}
+        via SEGW, implementing deep entity, \textbf{BRF+ rules}, validations and
+        error handling in OData \texttt{DPC\_EXT} classes.
+
+  \item \textbf{HANA Code Pushdown (30+ CDS / 5+ AMDP):}
+        Improved legacy program execution time by \textbf{40--60\%} through HANA
+        code pushdown, delivering \textbf{30+ CDS Views} and \textbf{5+ AMDP classes}.
+
+  \item \textbf{S/4HANA Readiness Assessment:}
+        Resolved \textbf{100\% of Priority 1 and Priority 2} ATC errors across all
+        custom programs ahead of migration timeline.
+
+  \item \textbf{Migration Cockpit (LTMC / LSMW):}
+        Designed Cost Center migration templates in LTMC and LSMW, reducing manual
+        migration effort by \textbf{$\sim$30\%}.
+
+  \item \textbf{Lookup Table \& Utility Class Framework:}
+        Eliminated hardcoding across \textbf{15+ enhancements} with a reusable
+        lookup table and utility class framework, enabling single-switch
+        production rollback control.
+
+  \item \textbf{GTS Commercial Invoice Adobe Form:}
+        Built a \textbf{Commercial Invoice Adobe Form} from scratch in SAP GTS
+        for compliant international trade documentation (import/export/customs).
+
+  \item \textbf{Hypercare \& Knowledge Transfer:}
+        Supported \textbf{multiple go-live events}; delivered complete KT and
+        handover documentation to Textron Aviation's in-house team ensuring
+        zero-defect production transitions.
+\end{itemize}
+
+\vspace{4pt}
+
+%% ── Job 2 ────────────────────────────────────────────────────────
+\cventry{Senior Software Engineer}{Marlabs Innovation Pvt Ltd}{Aug 2019 -- Jan 2022}
+\clientinfo{Client}{Merck Pharma, Germany}
+\clientinfo{Project}{NEO Implementation --- S/4HANA Greenfield}
+
+\begin{itemize}
+  \item \textbf{Multi-System Work Order Integration (4 ERPs):}
+        Architected a work order interface connecting \textbf{4 OPCO ERP systems}
+        to a central S/4HANA NEO system via RFC / SAP PI / Inbound Proxy,
+        managing full lifecycle status changes using \texttt{BAPI\_ALM\_ORDER\_CREATE}.
+
+  \item \textbf{IW31 Screen Enhancement:}
+        Added custom fields to \texttt{AUFK} and \texttt{AFKO} tables and enhanced
+        the IW31 screen to capture originating system details, improving
+        traceability across all 4 connected systems.
+
+  \item \textbf{BAPI Extension --- 5+ Days Saved:}
+        Extended \texttt{BAPI\_ALM\_ORDER\_CREATE} with custom BADI logic,
+        saving \textbf{5+ days} of rework by automating work order data entry.
+
+  \item \textbf{SLG Application Logs (100\% Coverage):}
+        Implemented SLG log objects on both sides of the interface, capturing
+        \textbf{100\% of interface messages} and enabling real-time technician
+        status tracking.
+
+  \item \textbf{SAP EAM Cloud --- 17 Days Saved:}
+        Delivered a backend EAM enhancement in \textbf{3 days vs.\ an approved
+        20-day estimate} after studying \textbf{150+ pages} of SAP documentation
+        to identify an implicit enhancement spot --- saving \textbf{17 development
+        days} and receiving formal Merck IT Head appreciation.
+
+  \item \textbf{Module Pool --- Effort Tracking \& Approval:}
+        Built a custom Module Pool program with table control for technician effort
+        logging; auto-dispatches supervisor approval emails via BCS classes.
+
+  \item \textbf{CSV Charging Reports to AL11:}
+        Automated CSV effort file generation depositing reports directly to the
+        AL11 directory, eliminating manual file creation for multiple business units.
+
+  \item \textbf{Fiori Backend --- AL11 File Download:}
+        Developed an OData SEGW project providing dynamic AL11 file listing with
+        desktop download via \texttt{GET\_STREAM} method.
+\end{itemize}
+
+\vspace{4pt}
+
+%% ── Job 3 ────────────────────────────────────────────────────────
+\cventry{Senior Software Engineer --- Band 10}{Accenture plc}{Apr 2019 -- Aug 2019}
+\clientinfo{Client}{Astellas Pharma, Japan}
+\clientinfo{Project}{Orion --- SAP S/4HANA \& Master Control Integration}
+
+\begin{itemize}
+  \item \textbf{8 OData Services --- SAP to Master Control:}
+        Designed and delivered \textbf{8 OData services} (inbound/outbound)
+        integrating SAP S/4HANA with the Master Control QM platform for pharma
+        and life sciences compliance.
+
+  \item \textbf{Production Order Launch Interface (POST/JSON):}
+        Created an OData POST interface transmitting production order details
+        to the Master Control API in JSON format on order creation and release.
+
+  \item \textbf{BOM Interface (GET):}
+        Built an OData GET service invoked by Master Control to retrieve Bill
+        of Materials data for production-linked materials.
+
+  \item \textbf{Inspection Characteristics (GET + POST):}
+        Delivered GET service using \texttt{BAPI\_INSPECTIONCHAR\_GETDETAIL}
+        and POST service using \texttt{BAPI\_INSPOPER\_RECORDRESULTS} to
+        close the quality loop between Master Control and SAP.
+\end{itemize}
+
+\vspace{4pt}
+
+%% ── Job 4 ────────────────────────────────────────────────────────
+\cventry{Systems Engineer}{IBM India Pvt Ltd}{Dec 2014 -- Apr 2019}
+\clientinfo{Client}{British Petroleum, UK}
+\clientinfo{Projects}{ADAM (App Dev \& Maintenance) \textbar\ Cash \& Banking \textbar\ GFT Packaging}
+
+\begin{itemize}
+  \item \textbf{FI Reconciliation Report (OOPS ALV, 30+ Fields):}
+        Developed a company-code-based FI Reconciliation Report from scratch
+        using \texttt{CL\_SALV\_TABLE} with \textbf{30+ output fields}.
+
+  \item \textbf{P1/P2 Support --- 100+ Tickets/Year:}
+        Independently resolved \textbf{100+ support tickets annually} across
+        IS-OIL, SD, MM, and FI within SLA.
+
+  \item \textbf{Quarterly Release Management --- 300+ TRs:}
+        Single-handedly managed \textbf{quarterly production releases} handling
+        \textbf{300+ Transport Requests}, resolving all sequencing and RC=8 issues.
+
+  \item \textbf{VIBAN POC --- Cash \& Banking:}
+        Delivered a Virtual IBAN proof-of-concept using a custom SNRO number range
+        object; enhanced XD01 with Customer BADIs and user exits to store VIBANs
+        per customer, enabling unique payment routing across multiple business units.
+
+  \item \textbf{Dynamic Vendor Invoice Report --- F.61:}
+        Built a dynamic invoice posting report from REGUH with configurable
+        selection fields; grouped and posted invoices to F.61 via
+        \texttt{CALL TRANSACTION}, reducing manual processing time.
+
+  \item \textbf{GFT BC Sets Rollout --- 6 Systems:}
+        Developed an \textbf{automated BC Set activation program} (SCPR1/2/3,
+        STMS\_IMPORT) that rolled FI configuration changes to \textbf{6 connected
+        systems}, eliminating manual configuration steps.
+
+  \item \textbf{Adobe Forms --- MM Purchase Orders:}
+        Built custom Adobe Forms for MM POs and Requisitions in SFP with a custom
+        driver program copy incorporating BP-specific business rules.
+
+  \item \textbf{End-to-End IDOC Setup:}
+        Delivered complete custom IDOC scenarios (partner profile, message type,
+        process code, inbound BAPIs); used
+        \texttt{MASTER\_IDOC\_DISTRIBUTE} for outbound generation.
+\end{itemize}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  KEY ACHIEVEMENTS
+%% ══════════════════════════════════════════════════════════════════
+\section{Key Achievements}
+
+\begin{itemize}
+  \item \textbf{Merck IT Head Appreciation --- 17 Days Saved:}
+        Delivered SAP EAM Cloud enhancement in \textbf{3 days vs.\ approved 20-day
+        estimate} after independently researching \textbf{150+ pages} of SAP
+        documentation, saving 17 development days and receiving formal client
+        appreciation from the Merck IT Head.
+
+  \item \textbf{Textron Aviation Client Recognition:}
+        Formally recognised for driving object design improvements; submitted
+        \textbf{multiple CIs} and achieved \textbf{40--60\% reduction in
+        execution time} through HANA code pushdown.
+
+  \item \textbf{Zero-Defect Production Releases (IBM/BP):}
+        Managed \textbf{300+ quarterly TRs} with zero critical post-go-live
+        incidents across British Petroleum's multi-system landscape.
+
+  \item \textbf{30+ CDS Views \& 5+ AMDPs Delivered:}
+        Improved performance of business-critical programs by \textbf{40--60\%}
+        through systematic HANA code pushdown at Textron Aviation.
+\end{itemize}
+
+%% ══════════════════════════════════════════════════════════════════
+%%  EDUCATION
+%% ══════════════════════════════════════════════════════════════════
+\section{Education}
+\cventry{Bachelor of Technology --- Electronics \& Communication Engineering}
+        {Punjab Technical University (PTU), India}{2009 -- 2013}
+
+\end{document}
