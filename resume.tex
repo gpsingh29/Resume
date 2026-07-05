@@ -30,10 +30,12 @@
 \definecolor{iconcolor}{HTML}{2D3748}
 
 %% ── Load Confidential data ───────────────────────────────────────────────────
+\IfFileExists{./UserPvtInfo.tex}{\input{./UserPvtInfo.tex}}{
    \newcommand{\UserName}{User Name}
    \newcommand{\UserMobile}{+1-111-111-111}
    \newcommand{\UserEmailID}{x@gmail.com}
    \newcommand{\UserLinkedIn}{\href{https://www.linkedin.com/in/123xxx}{in/123xxx}}
+}
 
 %% ── Hyperlinks ───────────────────────────────────────────────────
 \hypersetup{

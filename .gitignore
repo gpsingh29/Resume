@@ -1,5 +1,9 @@
+# Ignore to track the compiled files on local system
 *.aux
 *.log
 *.out
 *.pdf
 *.dvi
+
+#Ignore the User Private Information
+UserPvtInfo.tex
