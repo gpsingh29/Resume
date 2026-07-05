@@ -29,13 +29,19 @@
 \definecolor{datecolor}{HTML}{CCCCCC}
 \definecolor{iconcolor}{HTML}{2D3748}
 
+%% ── Load Confidential data ───────────────────────────────────────────────────
+   \newcommand{\UserName}{User Name}
+   \newcommand{\UserMobile}{+1-111-111-111}
+   \newcommand{\UserEmailID}{x@gmail.com}
+   \newcommand{\UserLinkedIn}{\href{https://www.linkedin.com/in/123xxx}{in/123xxx}}
+
 %% ── Hyperlinks ───────────────────────────────────────────────────
 \hypersetup{
   colorlinks = true,
   urlcolor   = accentblue,
   linkcolor  = accentblue,
-  pdfauthor  = { User Name},
-  pdftitle   = { User Name - SAP ABAP CV},
+  pdfauthor  = {\UserName{}},
+  pdftitle   = {\UserName{} - SAP ABAP CV},
   pdfsubject = {Curriculum Vitae}
 }
 
@@ -70,16 +76,16 @@
 %%  HEADER
 %% ══════════════════════════════════════════════════════════════════
 \begin{center}
-  {\LARGE\bfseries User Name{}}\\[5pt]
+  {\LARGE\bfseries \UserName{}}\\[5pt]
   {\large\color{accentblue}
     SAP ABAP 7.5 Certified Consultant \quad\textbar\quad
     SAP HANA 2.0 Certified Consultant
   }\\[6pt]
   \textcolor{iconcolor}{%
-    \faPhone*\ +1 999 999 0999 \quad\textbar\quad
-    \faEnvelope\ \href{mailto:xyz@gmail.com}{xyz@gmail.com{}} \quad\textbar\quad
-    \faLinkedin\ LinkedInProfile \quad\textbar\quad
-    \faMapPin\ Canada \textit{(Relocatable)}
+    \faPhone*\ \UserMobile{} \quad\textbar\quad
+    \faEnvelope\ \href{mailto:\UserEmailID{}}{\UserEmailID{}} \quad\textbar\quad
+    \faLinkedin\ \UserLinkedIn{} \quad\textbar\quad
+    \faMapPin\ GTA, Canada \textit{(Relocatable)}
   }
 \end{center}
 \vspace{2pt}\rule{\linewidth}{1.2pt}\vspace{4pt}
