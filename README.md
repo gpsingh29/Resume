@@ -14,8 +14,8 @@ LaTeX source for a resume, built with `pdflatex` via `make`.
 ## Build
 
 ```shell
-make        # compiles resume.tex -> resume.pdf (runs pdflatex 3x)
 make clean  # removes *.aux *.log *.out
+make        # compiles resume.tex -> resume.pdf (runs pdflatex 3x)
 ```
 
 ## First-Time Setup
@@ -49,7 +49,7 @@ If either line is blank or different, re-run the `git config --local ...` comman
 
 ### 2. Private info file
 
-`UserPvtInfo.tex` is required by `resume.tex` (see the commit that made it optional) and is deliberately excluded from git via `.gitignore` since it contains personal contact details. Create it locally with the following macros before running `make`:
+`UserPvtInfo.tex` is required by `resume.tex` and is deliberately excluded from git via `.gitignore` since it contains personal contact details. Create it locally with the following macros before running `make`:
 > [!IMPORTANT]
 > ```latex
 > \newcommand{\UserName}{...}
